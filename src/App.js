@@ -1,11 +1,28 @@
 import React from "react";
 
-const App = () => {
-  return (
-    <div>
-      <h2>App</h2>
-    </div>
-  );
-};
+class App extends React.Component {
+  state = {
+    gifts: []
+  };
+
+  addGift = () => {
+    const { gifts } = this.state;
+    let ids = gifts.map(gift => gift.id);
+    let largestId = ids.length > 0 ? Math.max(...ids) : 0;
+    gifts.push({ id: largestId + 1 });
+    this.setState({ gifts });
+  };
+
+  render() {
+    return (
+      <div>
+        <h2>Gift Giver</h2>
+        <button onClick={this.addGift} className="btn-add">
+          Add Gift
+        </button>
+      </div>
+    );
+  }
+}
 
 export default App;
