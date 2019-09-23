@@ -20,6 +20,11 @@ class App extends React.Component {
         <button onClick={this.addGift} className="btn-add">
           Add Gift
         </button>
+        <ul className="gift-list">
+          {this.state.gifts.map(gift => {
+            return <li key={gift.id}>{gift.id}</li>;
+          })}
+        </ul>
       </div>
     );
   }
