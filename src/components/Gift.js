@@ -11,7 +11,7 @@ class Gift extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="gift">
         <Form>
           <Form.Group>
             <Form.Label>Person</Form.Label>

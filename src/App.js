@@ -2,6 +2,7 @@ import React from "react";
 import Gift from "./components/Gift";
 import { max_number } from "./helpers";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 class App extends React.Component {
   state = {
